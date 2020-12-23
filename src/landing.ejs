@@ -23,71 +23,24 @@
 
             <div class="row row-cols-md-4 g-3">
 
-                <div class="col">
-                    <div class="card" style="width: 18rem;">
-                        <img src="/img/test-card.png" alt="">
-                        <div class="card-body">
-                            <h5 class="card-title">Title</h5>
-                            <p class="card-text">This is example card text.</p>
-                            <a href="#" class="btn btn-primary">Go to it.</a>
-                        </div>
-                    </div>
-                </div>
+                <% if (projects.loaded) { %>
+                    <% for (let project in projects.list) { %>
+                        <div class="col">
+                            <div class="card" style="width: 18rem;">
 
-                <div class="col">
-                    <div class="card" style="width: 18rem;">
-                        <img src="/img/test-card.png" alt="">
-                        <div class="card-body">
-                            <h5 class="card-title">Title</h5>
-                            <p class="card-text">This is example card text.</p>
-                            <a href="#" class="btn btn-primary">Go to it.</a>
-                        </div>
-                    </div>
-                </div>
+                                <img src="<%= projects.list[project].img %>" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title"><%= projects.list[project].name %></h5>
+                                    <p class="card-text"><%= projects.list[project].desc %></p>
+                                    <a href="#" class="btn btn-primary">Go!</a>
+                                </div>
 
-                <div class="col">
-                    <div class="card" style="width: 18rem;">
-                        <img src="/img/test-card.png" alt="">
-                        <div class="card-body">
-                            <h5 class="card-title">Title</h5>
-                            <p class="card-text">This is example card text.</p>
-                            <a href="#" class="btn btn-primary">Go to it.</a>
+                            </div>
                         </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="card" style="width: 18rem;">
-                        <img src="/img/test-card.png" alt="">
-                        <div class="card-body">
-                            <h5 class="card-title">Title</h5>
-                            <p class="card-text">This is example card text.</p>
-                            <a href="#" class="btn btn-primary">Go to it.</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="card" style="width: 18rem;">
-                        <img src="/img/test-card.png" alt="">
-                        <div class="card-body">
-                            <h5 class="card-title">Title</h5>
-                            <p class="card-text">This is example card text.</p>
-                            <a href="#" class="btn btn-primary">Go to it.</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="card" style="width: 18rem;">
-                        <img src="/img/test-card.png" alt="">
-                        <div class="card-body">
-                            <h5 class="card-title">Title</h5>
-                            <p class="card-text">This is example card text.</p>
-                            <a href="#" class="btn btn-primary">Go to it.</a>
-                        </div>
-                    </div>
-                </div>
+                    <% } %>
+                <% } else { %>
+                    <span>Hmm, projects can't be loaded for some reason.</span>
+                <% } %>
 
             </div>
             
