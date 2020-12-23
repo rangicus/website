@@ -3,7 +3,6 @@
     <head>
         <title>rangicus</title>
 
-        <link rel="shortcut icon" href="/img/favico.png">
         <link rel="stylesheet" href="/lib/bootstrap-5.0.0/css/bootstrap.min.css">
     </head>
     <body>
@@ -32,7 +31,7 @@
                                 <div class="card-body">
                                     <h5 class="card-title"><%= projects.list[project].name %></h5>
                                     <p class="card-text"><%= projects.list[project].desc %></p>
-                                    <a href="#" class="btn btn-primary">Go!</a>
+                                    <a href="<%= projects.list[project].link %>" class="btn btn-primary">Go!</a>
                                 </div>
 
                             </div>

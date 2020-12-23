@@ -35,7 +35,7 @@ function loadProjects () {
 
                     data = JSON.parse(data);
                     PROJECTS.list[project] = data;
-                    PROJECTS.list[project].img = `/projects/${project}/card-img.png`;
+                    PROJECTS.list[project].img = `/projects/${project}/card.png`;
                     PROJECTS.list[project].link = `/projects/${project}`;
 
                     loaded ++;
@@ -66,6 +66,7 @@ app.use(`/lib`, express.static(getPath(`/lib`)));
 app.use(`/img`, express.static(getPath(`/img`)));
 app.use(`/projects`, express.static(getPath(`/projects`)));
 
+app.get(`/favicon.ico`, (req, res) => res.redirect(`/img/favico.png`));
 app.get(`/`, (req, res) => res.render(getPath(`/src/landing.ejs`), { projects: PROJECTS }));
 
 // Main
