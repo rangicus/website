@@ -1,0 +1,31 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "my website",
+  "main": "src/server.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "fs": "^0.0.1-security",
+    "node": "^15.4.0",
+    "path": "^0.12.7",
+    "npm": "^6.14.10"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rangicus/website.git"
+  },
+  "author": "rangicus",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rangicus/website/issues"
+  },
+  "homepage": "https://github.com/rangicus/website#readme"
+}
